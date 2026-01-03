@@ -32,6 +32,21 @@ Each tutorial module is organized as a separate directory with its own README, c
 - Agent invocation patterns
 - Token usage optimization
 
+#### [langchain2-agent](./langchain2-agent/)
+**Advanced Agent Implementation with createAgent**
+- Using `createAgent` function for better agent management
+- Message-based agent API and proper invocation patterns
+- Model compatibility and tool support (Llama3.2 vs DeepSeek)
+- Advanced error handling and troubleshooting
+- Performance optimization for agent workflows
+
+**Key Concepts Covered:**
+- Advanced agent creation patterns
+- Message-based API usage
+- Model selection and compatibility
+- Error handling and debugging
+- Performance comparison and optimization
+
 ## Getting Started
 
 ### Prerequisites
@@ -63,9 +78,10 @@ npm install
 ollama serve
 ```
 
-5. Pull the required model:
+4. Pull the required models:
 ```bash
 ollama pull deepseek-r1:1.5b
+ollama pull llama3.2:3b  # For better tool support in langchain2-agent
 ```
 
 ### Running Examples
@@ -76,8 +92,9 @@ Each tutorial module includes runnable examples. Check the specific README in ea
 
 Recommended learning progression:
 
-1. **Start with [langchain1-llm](./langchain1-llm/)** - Learn the basics
-2. **Advanced tutorials** (coming soon) - Build on foundational knowledge
+1. **Start with [langchain1-llm](./langchain1-llm/)** - Learn the basics of LangChain and tool creation
+2. **Continue with [langchain2-agent](./langchain2-agent/)** - Master advanced agent patterns and createAgent usage
+3. **Advanced tutorials** (coming soon) - Build on foundational knowledge
 
 ## Contributing
 
