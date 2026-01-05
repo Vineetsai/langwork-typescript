@@ -1,6 +1,10 @@
-# Demo API for Tools and MCP Server Tutorial
+# Demo API
 
-A demo REST API built with NestJS that provides mock user and order data. This API is designed to be used in tutorials demonstrating AI tool integration and MCP (Model Context Protocol) server concepts.
+A REST API built with NestJS that provides mock user and order data.
+
+## Overview
+
+This is part of the [shared-services](../README.md) collection, designed to demonstrate practical API patterns for AI tool integration and MCP server development.
 
 ## Purpose
 
