@@ -12,11 +12,27 @@ Langwork is designed to be a practical learning resource that covers:
 - **Agent Development**: Building intelligent agents with tools
 - **Tool Creation**: Developing custom tools for LLM agents
 
-## Tutorial Structure
+## Project Structure
 
-Each tutorial module is organized as a separate directory with its own README, code examples, and dependencies.
+```
+langwork/
+├── shared-services/          # Reusable APIs and services for tutorials
+│   ├── demo-api/             # NestJS REST API for user/order management
+│   └── README.md             # Shared services documentation
+├── langchain1-llm/           # Basic LLM integration examples
+├── langchain2-agent/         # AI agent development examples
+├── langgraph-base/          # LangGraph workflow examples
+└── README.md                # This file
+```
 
-### 📚 Available Tutorials
+### 📚 Available Tutorials & Services
+
+#### [shared-services](./shared-services/)
+**Reusable APIs and Services**
+- Demo API with user and order management endpoints
+- Designed for AI tool integration and MCP server development
+- RESTful patterns suitable for AI agent consumption
+- Full TypeScript support and validation
 
 #### [langchain1-llm](./langchain1-llm/)
 **Basic LangChain with LLM Integration**
@@ -31,6 +47,21 @@ Each tutorial module is organized as a separate directory with its own README, c
 - Tool creation with Zod schemas
 - Agent invocation patterns
 - Token usage optimization
+
+#### [langchain2-agent](./langchain2-agent/)
+**Advanced Agent Implementation with createAgent**
+- Using `createAgent` function for better agent management
+- Message-based agent API and proper invocation patterns
+- Model compatibility and tool support (Llama3.2 vs DeepSeek)
+- Advanced error handling and troubleshooting
+- Performance optimization for agent workflows
+
+**Key Concepts Covered:**
+- Advanced agent creation patterns
+- Message-based API usage
+- Model selection and compatibility
+- Error handling and debugging
+- Performance comparison and optimization
 
 ## Getting Started
 
@@ -50,6 +81,8 @@ cd langwork
 
 2. Navigate to the specific tutorial directory:
 ```bash
+cd shared-services/demo-api  # Start with the demo API
+# or
 cd langchain1-llm  # or other tutorial modules
 ```
 
@@ -58,14 +91,21 @@ cd langchain1-llm  # or other tutorial modules
 npm install
 ```
 
-4. Start Ollama (if not already running):
+4. For tutorials requiring the demo API, start it first:
+```bash
+cd shared-services/demo-api
+npm run start:dev
+```
+
+5. Start Ollama (if not already running):
 ```bash
 ollama serve
 ```
 
-5. Pull the required model:
+6. Pull the required models:
 ```bash
 ollama pull deepseek-r1:1.5b
+ollama pull llama3.2:3b  # For better tool support in langchain2-agent
 ```
 
 ### Running Examples
@@ -76,8 +116,10 @@ Each tutorial module includes runnable examples. Check the specific README in ea
 
 Recommended learning progression:
 
-1. **Start with [langchain1-llm](./langchain1-llm/)** - Learn the basics
-2. **Advanced tutorials** (coming soon) - Build on foundational knowledge
+1. **Start with [shared-services](./shared-services/)** - Set up the demo API and understand the available endpoints
+2. **Continue with [langchain1-llm](./langchain1-llm/)** - Learn the basics of LangChain and tool creation
+3. **Move to [langchain2-agent](./langchain2-agent/)** - Master advanced agent patterns and createAgent usage
+4. **Advanced tutorials** (coming soon) - Build on foundational knowledge
 
 ## Contributing
 

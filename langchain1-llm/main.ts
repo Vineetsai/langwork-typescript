@@ -1,4 +1,3 @@
-import { createAgent } from "langchain";
 import { addition, subtraction, multiplication, division } from "./tools";
 import { ChatOllama } from "@langchain/ollama";
 
